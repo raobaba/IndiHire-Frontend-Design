@@ -1,0 +1,51 @@
+$primary-color: rgb(177, 76, 68);
+$font-size: 50px;
+$line-height: 60px;
+$font-weight: 500;
+$text-decoration-color: rgb(47, 47, 47);
+.box {
+  width: 53%;
+  height: 500px;
+
+  .spanBox{
+    width: 70%;
+    height: 180px;
+    margin-left: 30%;
+  }
+  
+  .inner {
+    color: rgb(0, 0, 0);
+    font-family: 'Barlow', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+  }
+
+  .content {
+    background-color: $primary-color;
+    padding: 20px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 40px;
+    color: wheat;
+    margin-top: 20px;
+    height: 58%;
+  }
+  .pBox{
+    width: 70%;
+    height: 150px;
+    margin-left: 29%;
+    margin-top: 10%;
+  }
+  .white-text {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: rgb(255, 255, 255);
+    text-align: start;
+    margin: 0;
+    padding: 0;
+  }
+}

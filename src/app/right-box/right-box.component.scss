@@ -1,0 +1,14 @@
+.container {
+    .row {
+      justify-content: flex-end;
+      
+      #upper-box,
+      #lower-box {
+        width: 200px;
+      }
+      
+      #middle-box {
+        width: 400px;
+      }
+    }
+  }

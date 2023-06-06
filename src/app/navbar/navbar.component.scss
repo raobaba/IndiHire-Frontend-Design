@@ -1,24 +1,23 @@
 .navbar-nav li.nav-item a.nav-link {
   position: relative;
   z-index: 1;
+  color: rgb(64, 64, 64);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.5s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 }
 
-.navbar-nav li.nav-item a.nav-link:after,
-.menu-overlay ul li a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000;
-  transition: width 0.5s ease;
-}
-
-.navbar-nav li.nav-item a.nav-link:hover:after,
-.menu-overlay ul li a:hover:after {
-  width: 100%;
-}
 @media (max-width: 767.98px) {
   .navbar-toggler {
     display: block;
@@ -42,32 +41,30 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-
-    // Apply blur effect to the content behind the menu
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-  }
+    
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
 
-  .menu-overlay ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-  }
+      li {
+        margin-bottom: 10px;
 
-  .menu-overlay ul li {
-    margin-bottom: 10px;
-  }
-   
-  .menu-overlay ul li a {
-    display: block;
-    padding: 10px;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Barlow", sans-serif;
-    color: dark;
+        a {
+          display: block;
+          padding: 10px;
+          background-color: #fff;
+          color: #000;
+          text-align: center;
+          text-decoration: none;
+          font-family: "Barlow", sans-serif;
+          color: dark;
+        }
+      }
+    }
   }
 }
