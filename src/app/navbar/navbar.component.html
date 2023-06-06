@@ -1,14 +1,54 @@
-<nav class="navbar ">
-    <div class="navbar__logo">
-      <img src="https://indihire.com/wp-content/uploads/2022/03/logo.png" alt="Logo" width="100px">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="{{logo}}" alt="Logo" width="100px">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [class.menu-open]="isMenuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section1" routerLinkActive="active">{{ navbar.first }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section2" routerLinkActive="active">{{ navbar.second }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section3" routerLinkActive="active">{{ navbar.third }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section4" routerLinkActive="active">{{ navbar.fourth }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section5" routerLinkActive="active">{{ navbar.fifth }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/section6" routerLinkActive="active">{{ navbar.sixth }}</a>
+        </li>
+      </ul>
     </div>
-    <div class="navbar__sections">
-      <a routerLink="/section1" routerLinkActive="active">{{ navbar.first }}</a>
-      <a routerLink="/section2" routerLinkActive="active">{{ navbar.second }}</a>
-      <a routerLink="/section3" routerLinkActive="active">{{ navbar.third }}</a>
-      <a routerLink="/section4" routerLinkActive="active">{{ navbar.fourth }}</a>
-      <a routerLink="/section5" routerLinkActive="active">{{ navbar.fifth }}</a>
-      <a routerLink="/section6" routerLinkActive="active">{{ navbar.sixth }}</a>
+    <div id="menu-overlay" class="menu-overlay" *ngIf="isMenuOpen">
+      <ul>
+        <li>
+          <a routerLink="/section1" routerLinkActive="active">{{ navbar.first }}</a>
+        </li>
+        <li>
+          <a routerLink="/section2" routerLinkActive="active">{{ navbar.second }}</a>
+        </li>
+        <li>
+          <a routerLink="/section3" routerLinkActive="active">{{ navbar.third }}</a>
+        </li>
+        <li>
+          <a routerLink="/section4" routerLinkActive="active">{{ navbar.fourth }}</a>
+        </li>
+        <li>
+          <a routerLink="/section5" routerLinkActive="active">{{ navbar.fifth }}</a>
+        </li>
+        <li>
+          <a routerLink="/section6" routerLinkActive="active">{{ navbar.sixth }}</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
