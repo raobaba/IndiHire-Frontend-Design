@@ -4,7 +4,7 @@
       <img src="{{logo}}" alt="Logo" width="100px">
     </a>
     <button class="navbar-toggler" type="button" (click)="toggleMenu()" [class.menu-open]="isMenuOpen">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" [class.menu-icon]="!isMenuOpen" [class.close-icon]="isMenuOpen"></span>
     </button>
     <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
       <ul class="navbar-nav ml-auto">
