@@ -1,14 +1,94 @@
-.container {
-    .row {
-      justify-content: flex-end;
-      
-      #upper-box,
-      #lower-box {
-        width: 200px;
-      }
-      
-      #middle-box {
-        width: 400px;
+.box {
+  height: auto;
+  display: flex;
+  margin-top: 8%;
+  justify-content: flex-end;
+
+  .control {
+    width: 90%;
+    margin-left: 0%;
+
+    .upper-box {
+      width: 45%;
+      height: 230px;
+      background-color: rgb(177, 76, 68);
+      flex-grow: 1;
+      border-top-right-radius: 30%;
+      border-top-left-radius: 20%;
+    }
+
+    #middle {
+      display: flex; // Set display property to flex
+      width: 90%;
+      height: 230px;
+      background-color: rgb(177, 76, 68);
+      flex-grow: 1;
+      border-bottom-left-radius: 45px;
+      border-top-left-radius: 45px;
+
+      .arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+
+        .backward-arrow,
+        .forward-arrow {
+          margin-left: 20px;
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            font-size: 16px;
+          }
+        }
       }
     }
+
+    #mdbox {
+      width: 200px;
+      height: 200px;
+      margin-left: 20px;
+      margin-top: 20px;
+      display: grid;
+    }
+
+    #mdbox > img {
+      margin-left: 40px;
+    }
+
+    .box {
+      width: 75%;
+      height: 50px;
+      text-align: center;
+      text-justify: auto;
+      color: aliceblue;
+      font-size: 17px;
+    }
+
+    .text-center {
+      margin-top: -45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: aliceblue;
+      font-size: 17px;
+    }
+
+    .lower-box {
+      width: 45%;
+      height: 230px;
+      background-color: rgb(177, 76, 68);
+      flex-grow: 1;
+      border-bottom-right-radius: 30%;
+      border-bottom-left-radius: 20%;
+    }
   }
+}

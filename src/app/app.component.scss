@@ -1,0 +1,19 @@
+.cont {
+    display: flex;
+    justify-content: space-between;
+    
+    .app-left-box,
+    .app-right-box {
+      width: 50% !important;
+    }
+    
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      
+      .app-left-box,
+      .app-right-box {
+        width: 100% !important;
+      }
+    }
+  }
+  

@@ -1,12 +1,20 @@
-<div class="container">
-    <div class="row justify-content-center">
-      <div class="col-4 bg-danger" id="upper-box"></div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-8 bg-success" id="middle-box"></div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-4 bg-primary" id="lower-box"></div>
+<div class="box">
+    <div class="control">
+      <div class="d-flex flex-column align-items-end">
+        <div class="upper-box"></div>
+        <div id="middle" class="middle-box">
+          <!-- Display slide items here -->
+          <div id="mdbox" *ngFor="let item of slide; let i = index" [hidden]="currentIndex !== i">
+            <img [src]="item.img" alt="{{ item.text }}" />
+            <div class="text-center">{{ item.text }}</div> <!-- Added a new div for centered text -->
+          </div>
+          <div class="arrow">
+            <span class="backward-arrow"><i class="fas fa-chevron-left"></i></span>
+            <span class="forward-arrow"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </div>
+        <div class="lower-box"></div>
+      </div>
     </div>
   </div>
   

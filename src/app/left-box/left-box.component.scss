@@ -3,12 +3,17 @@ $font-size: 50px;
 $line-height: 60px;
 $font-weight: 500;
 $text-decoration-color: rgb(47, 47, 47);
-.box {
-  width: 53%;
-  height: 500px;
 
-  .spanBox{
-    width: 70%;
+@mixin rounded-corners {
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 40px;
+}
+
+.box {
+  margin-top: 8%;
+  height: 500px;
+  .spanBox {
+    width: 75%;
     height: 180px;
     margin-left: 30%;
   }
@@ -24,18 +29,19 @@ $text-decoration-color: rgb(47, 47, 47);
   .content {
     background-color: $primary-color;
     padding: 20px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 40px;
+    @include rounded-corners;
     color: wheat;
     margin-top: 20px;
-    height: 58%;
+    height: 55%;
   }
-  .pBox{
+  
+  .pBox {
     width: 70%;
     height: 150px;
     margin-left: 29%;
     margin-top: 10%;
   }
+  
   .white-text {
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0);
@@ -43,9 +49,24 @@ $text-decoration-color: rgb(47, 47, 47);
     font-size: 17px;
     line-height: 24px;
     font-weight: 400;
-    text-decoration: rgb(255, 255, 255);
+    text-decoration: $text-decoration-color;
     text-align: start;
     margin: 0;
     padding: 0;
+  }
+  .button{
+    margin-top: 10%;
+    display: flex;
+    padding: 10px;
+    border: none;
+
+  }
+  .button>a{
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+  .button>a:hover{
+    background-color: blueviolet;
+    color: azure;
   }
 }
